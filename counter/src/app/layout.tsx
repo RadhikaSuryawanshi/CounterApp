@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -26,29 +25,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <html lang="en" data-theme="retro">
-      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-       {children}
+        {children}
         <div className="w-full  flex justify-center  ">
-         
           <nav className="w-[30%] h-[10%]  rounded-4xl shadow-lg shadow-gray-700  flex p-1">
             {/* <h1 className="text-2xl font-extrabold">Counter</h1> */}
             <div className="w-full flex justify-center">
-              <Link href={"/"} className="text-[1rem] font-semibold ml-6">Home</Link>
-              
-              <Link href={"/"} className="text-[1rem] font-semibold ml-6" >help</Link>
+              <Link href={"/"} className="text-[1rem] font-semibold ml-6">
+                Home
+              </Link>
+
+              <Link href={"/"} className="text-[1rem] font-semibold ml-6">
+                help
+              </Link>
             </div>
           </nav>
         </div>
-         
-        <ToastContainer position="top-right" autoClose={500}  />
+
+        <ToastContainer position="top-right" autoClose={500} />
       </body>
     </html>
   );
 }
- 
